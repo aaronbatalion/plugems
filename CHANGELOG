@@ -1,0 +1,19 @@
+rel_1_1_5:
+  date: 2007-06-12
+  notes:
+    - Fixed requiring of plugem name file for plugins only if it exists
+
+rel_1_1_2:
+  date: 2007-05-02
+  notes:
+    - Added the rails version validation since it is not compatible with edge
+
+rel_1_1_1:
+  date: 2007-05-02
+  notes:
+    - Added support for lower and upper version limit specifications
+
+rel_1_1_0:
+  date: 2007-05-01
+  notes:
+    - Initial Drop

@@ -1,0 +1,5 @@
+:version: [1, 1]  
+:name: 'plugems'
+:description: 'Dependency-management framework built on top of Ruby On Rails'
+:dependencies: []
+

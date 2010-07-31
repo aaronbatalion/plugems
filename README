@@ -1,1 +1,53 @@
-Like plugins, like gems... plu-gems... plugems.
+= UPDATED
+
+This is based on work for Rails 1.1.X to support bundling dependencies. With all the recent work around 
+bundler and isolate, I wanted to birng this back.
+
+
+
+
+= Introduction
+
+One sentence summary: "Everything is a gem, most things work from within the gem, and all dependencies are accounted for."
+
+More details can be found on http://revolutiononrails.blogspot.com/2007/05/release-plugems-runtime.html
+
+= Installation Guide:
+
+== Install it on your box:
+
+As a gem:
+gem install plugems
+
+== Create your plugem configuration:
+
+Add config/manifest.yml describing your plugem and its dependencies:
+
+:version: [1, 0]
+:name: "cool_application"
+:description: "My First Plugemified Application"
+:dependencies:
+  - ['some_gem', '~> 1.0']
+  - ['other_gem', '> 2.0']
+  - ['one_more', '2.0.1']
+
+
+== Bootstrap the plugems:
+
+Add the plugems requirement to config/boot.rb at the bottom right before the initializer call:
+
+  # Add this line:
+  require_gem 'plugems', '~> 1.0'
+
+  Rails::Initializer.run(:set_load_path)
+end
+
+
+= License
+
+Plugems released under the MIT license.
+
+
+= Support
+
+The plugin RubyForge page is http://rubyforge.org/projects/plugems
